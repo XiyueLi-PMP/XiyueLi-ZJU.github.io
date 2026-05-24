@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Name | Data & AI Professional</title>
+    <meta
+      name="description"
+      content="Portfolio homepage for a full-stack Data & AI professional specializing in Data Science, AI Agents, BI, Automation, Cloud Data Platforms, and Data Governance."
+    >
+    <style>
+      :root {
+        --ink: #141414;
+        --muted: #5f625f;
+        --soft: #f4f7f4;
+        --paper: #fbfbf8;
+        --white: #ffffff;
+        --line: #dde2dc;
+        --green: #214f45;
+        --green-2: #dceae3;
+        --coral: #bd5d43;
+        --gold: #a9823b;
+        --blue: #2f5f7a;
+        --shadow: 0 20px 60px rgba(21, 34, 29, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Arial, sans-serif;
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .shell {
+        width: min(1160px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid rgba(221, 226, 220, 0.9);
+        background: rgba(251, 251, 248, 0.9);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav {
+        display: flex;
+        min-height: 72px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 800;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 40px;
+        height: 40px;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        color: var(--green);
+        box-shadow: 0 10px 24px rgba(21, 34, 29, 0.08);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .nav-links a {
+        border-radius: 999px;
+        padding: 9px 13px;
+      }
+
+      .nav-links a:hover {
+        background: var(--green-2);
+        color: var(--green);
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 45px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        padding: 0 16px;
+        font-weight: 760;
+        transition:
+          transform 160ms ease,
+          background 160ms ease,
+          border-color 160ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .button.primary {
+        background: var(--green);
+        color: var(--white);
+      }
+
+      .button.secondary {
+        border-color: var(--line);
+        background: rgba(255, 255, 255, 0.78);
+      }
+
+      .hero {
+        min-height: calc(100vh - 72px);
+        display: grid;
+        align-items: center;
+        padding: 58px 0 34px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(380px, 0.9fr);
+        gap: 48px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 18px;
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 34px;
+        height: 2px;
+        border-radius: 999px;
+        background: var(--coral);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 11.5ch;
+        margin-bottom: 24px;
+        font-size: clamp(44px, 7.4vw, 86px);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .hero-copy {
+        max-width: 720px;
+        margin-bottom: 30px;
+        color: #414740;
+        font-size: clamp(18px, 2vw, 22px);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 34px;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+        border-top: 1px solid var(--line);
+        padding-top: 22px;
+      }
+
+      .metric strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 29px;
+        line-height: 1;
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .hero-media {
+        position: relative;
+        min-height: 540px;
+      }
+
+      .hero-image {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-image::after {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background:
+          linear-gradient(180deg, rgba(20, 20, 20, 0.04), rgba(20, 20, 20, 0.18)),
+          linear-gradient(90deg, rgba(251, 251, 248, 0.2), rgba(251, 251, 248, 0));
+      }
+
+      .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .status-card {
+        position: absolute;
+        right: 24px;
+        bottom: 24px;
+        width: min(340px, calc(100% - 48px));
+        border: 1px solid rgba(255, 255, 255, 0.76);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 19px;
+        box-shadow: 0 18px 48px rgba(21, 34, 29, 0.16);
+        backdrop-filter: blur(18px);
+      }
+
+      .status-card strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .status-card p {
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .section {
+        padding: 88px 0;
+      }
+
+      .section.alt {
+        background: var(--white);
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.7fr);
+        gap: 36px;
+        align-items: end;
+        margin-bottom: 34px;
+      }
+
+      h2 {
+        margin-bottom: 0;
+        font-size: clamp(32px, 4vw, 52px);
+        line-height: 1.04;
+        letter-spacing: 0;
+      }
+
+      .section-head p {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .focus-grid,
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .focus-card,
+      .project-card,
+      .role-card,
+      .education-card,
+      .contact-panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+      }
+
+      .focus-card {
+        min-height: 250px;
+        padding: 22px;
+      }
+
+      .focus-card:nth-child(2) {
+        background: #f7f1e8;
+      }
+
+      .focus-card:nth-child(3) {
+        background: var(--green-2);
+      }
+
+      .focus-card:nth-child(4) {
+        background: #edf3f5;
+      }
+
+      .icon {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        border-radius: 8px;
+        background: var(--ink);
+        color: var(--white);
+        font-weight: 900;
+      }
+
+      .focus-card h3,
+      .project-card h3 {
+        margin: 20px 0 10px;
+        font-size: 21px;
+        line-height: 1.16;
+      }
+
+      .focus-card p,
+      .project-card p,
+      .role-card p,
+      .education-card p {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .project-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .project-card {
+        min-height: 335px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px;
+      }
+
+      .project-card.featured {
+        background: var(--green);
+        color: var(--white);
+      }
+
+      .project-card.featured p,
+      .project-card.featured .project-result {
+        color: rgba(255, 255, 255, 0.76);
+      }
+
+      .tag {
+        display: inline-flex;
+        width: fit-content;
+        border: 1px solid currentColor;
+        border-radius: 999px;
+        padding: 4px 10px;
+        color: var(--coral);
+        font-size: 12px;
+        font-weight: 820;
+      }
+
+      .project-card.featured .tag {
+        color: #f4cbbd;
+      }
+
+      .project-result {
+        margin-top: 22px;
+        color: var(--green);
+        font-weight: 840;
+      }
+
+      .project-button {
+        display: inline-flex;
+        width: fit-content;
+        min-height: 42px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.34);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.12);
+        color: var(--white);
+        padding: 0 14px;
+        font-weight: 760;
+      }
+
+      .project-button.light {
+        border-color: var(--green);
+        background: var(--green);
+        color: var(--white);
+      }
+
+      .project-button.light:hover {
+        border-color: var(--green);
+        background: var(--white);
+        color: var(--green);
+      }
+
+      .project-button:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .experience-grid {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 18px;
+      }
+
+      .roles {
+        display: grid;
+        gap: 14px;
+      }
+
+      .role-card {
+        padding: 22px;
+      }
+
+      .role-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 8px;
+        color: var(--coral);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .role-card h3 {
+        margin-bottom: 7px;
+        font-size: 20px;
+      }
+
+      .education-card {
+        height: 100%;
+        padding: 26px;
+        background: var(--soft);
+      }
+
+      .education-list {
+        display: grid;
+        gap: 18px;
+        margin-top: 24px;
+      }
+
+      .education-item {
+        border-top: 1px solid var(--line);
+        padding-top: 16px;
+      }
+
+      .education-item strong {
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .certification-list {
+        display: grid;
+        gap: 10px;
+        margin-top: 18px;
+        border-top: 1px solid var(--line);
+        padding-top: 18px;
+      }
+
+      .certification-item {
+        display: block;
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        padding: 10px 12px;
+        color: #343b36;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .subsection-title {
+        margin: 24px 0 12px;
+        font-size: 22px;
+        line-height: 1.2;
+        letter-spacing: 0;
+        color: var(--green);
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 24px;
+      }
+
+      .skills span {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.76);
+        padding: 8px 12px;
+        color: #343b36;
+        font-size: 14px;
+      }
+
+      .contact {
+        padding-bottom: 96px;
+      }
+
+      .contact-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 28px;
+        align-items: center;
+        padding: 34px;
+        background: var(--ink);
+        color: var(--white);
+      }
+
+      .contact-panel p {
+        max-width: 690px;
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.74);
+      }
+
+      .contact-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px;
+      }
+
+      .contact-links a {
+        border: 1px solid rgba(255, 255, 255, 0.26);
+        border-radius: 8px;
+        padding: 10px 13px;
+        color: var(--white);
+        font-weight: 760;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        padding: 26px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid,
+        .section-head,
+        .experience-grid,
+        .contact-panel {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          min-height: auto;
+          padding-top: 46px;
+        }
+
+        .hero-media {
+          min-height: 440px;
+        }
+
+        .focus-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-links {
+          justify-content: flex-start;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .shell {
+          width: min(100% - 28px, 1160px);
+        }
+
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: center;
+          padding: 14px 0;
+        }
+
+        .nav-links {
+          width: 100%;
+          overflow-x: auto;
+          padding-bottom: 2px;
+        }
+
+        h1 {
+          font-size: 48px;
+        }
+
+        .metrics,
+        .focus-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-media {
+          min-height: 360px;
+        }
+
+        .status-card {
+          right: 14px;
+          bottom: 14px;
+          width: calc(100% - 28px);
+        }
+
+        .section {
+          padding: 64px 0;
+        }
+
+        .contact-panel {
+          padding: 24px;
+        }
+
+        .footer-inner {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="shell nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Back to homepage">
+          <span class="brand-mark">XL</span>
+          <span>Your Name</span>
+        </a>
+        <div class="nav-links">
+          <a href="#expertise">Expertise</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="shell hero-grid">
+          <div>
+            <p class="eyebrow">Data Science / AI Strategy / Organization Transformation / Leadership </p>
+            <h1>Data & AI solutions with measurable business impact.</h1>
+            <p class="hero-copy">
+              I am a full-stack Data & AI professional with 6+ years of experience
+              across Data Science, Machine Learning, AI Agents, Business Intelligence, Cloud Data
+              Platforms, Automation, and Data Governance. I bridge hands-on technical
+              delivery and strategic leadership, setting technical direction, shaping
+              scalable analytics operating models, and translating AI and data science
+              into measurable business advantage.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#projects">View selected work</a>
+              <a class="button secondary" href="mailto:xlnczju@outlook.com">Contact me</a>
+            </div>
+            <div class="metrics" aria-label="Professional highlights">
+              <div class="metric">
+                <strong>6+</strong>
+                <span>years across data science and analytics leadership</span>
+              </div>
+              <div class="metric">
+                <strong>8+</strong>
+                <span> Microsoft & Azure, AWScertified</span>
+              </div>
+              <div class="metric">
+                <strong>PMP</strong>
+                <span>Project Management Professional (PMP)</span>
+              </div>
+              <div class="metric">
+                <strong>UK/US</strong>
+                <span>International professional experience</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-media" aria-label="Editorial workspace image">
+            <div class="hero-image">
+              <img src="assets/hero-workspace.png" alt="Modern data and analytics workspace">
+            </div>
+            <aside class="status-card">
+              <strong>Current focus</strong>
+              <p>
+                Building scalable data science & analytics systems, AI-assisted workflows, and
+                governed data foundations that help teams make better decisions.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="expertise">
+        <div class="shell">
+          <div class="section-head">
+            <h2>Where I create value</h2>
+            <p>
+              As a T-Shaped Data & AI Professional, I integrated Cloud Solutions, Data Science, AI, and Business Strategy 
+              to deliver innovative and effective data solutions that 
+              align technology with business priorities, enable better decisions, and create measurable organisational impact.
+            </p>
+          </div>
+
+          <div class="focus-grid">
+            <article class="focus-card">
+              <span class="icon">ML</span>
+              <h3>Data Science & Machine Learning</h3>
+              <p>
+                Predictive modelling, optimisation, statistical analysis, feature
+                engineering, model evaluation, and Python-based analytical workflows.
+              </p>
+            </article>
+            <article class="focus-card">
+              <span class="icon">AI</span>
+              <h3>AI Agents & Automation</h3>
+              <p>
+                Modular AI analytics agents, automated document processing,
+                rule-based mapping, historical case retrieval, and AI-assisted delivery.
+              </p>
+            </article>
+            <article class="focus-card">
+              <span class="icon">BI</span>
+              <h3>BI & Executive Reporting</h3>
+              <p>
+                Power BI dashboards, metrics design, Kimball modelling, automated
+                reporting workflows, and decision-ready narrative insights.
+              </p>
+            </article>
+            <article class="focus-card">
+              <span class="icon">DM</span>
+              <h3>Data Management, Data Governance & Strategic Consulting</h3>
+              <p>
+                Business Reporting Maturity Assessment, Data Governance framework, Data Management, Business Reporting Transformation, Strategic Consulting.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="shell">
+          <div class="section-head">
+            <h2>Selected work</h2>
+            <p>
+              A few representative examples of how I turn complex requirements
+              into reliable, scalable, and business-relevant data products.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <div>
+                <span class="tag">Data Science / Optimisation modelling</span>
+                <h3>End-to-end optimisation model for operational efficiency</h3>
+                <p>
+                  Led the data science workstream as the sole data scientist in a cross-functional team, 
+                  translating business requirements into an optimisation model 
+                  that drove an 80% improvement in operational efficiency while enhancing safety and sustainability and reducing costs.
+                </p>
+              </div>
+              <div class="project-result">Outcome: 80% improvement in operational efficiency</div>
+              <a class="project-button light" href="https://www.d2-global.com/project/network-rail-nwc-structural-examination-optimisation/" target="_blank" rel="noreferrer">
+                    Click to view project: Network Rail NW&C Structural Examination Optimisation
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div>
+                <span class="tag">Machine Learning</span>
+                <h3>Machine learning model for roadway safety risk prediction</h3>
+                <p>
+                  Developed machine learning models on AWS using tens of thousands of traffic
+                  crash records to predict roadway network safety risk, enabling data-driven
+                  prioritisation of funding allocation for roadway safety improvement projects.
+                  Compared Logistic Regression, Support Vector Machine, Random Forest, and
+                  Extreme Gradient Boosting to identify the most effective predictive approach.
+                </p>
+              </div>
+              <div>
+                <div class="project-result">
+                  Outcome: practical crash risk insights for investment prioritisation
+                </div>
+                <a class="project-button light" href="https://crashdashboard.ccrpc.org/" target="_blank" rel="noreferrer">
+                  Click to view prediction results
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div>
+                <span class="tag">AI Agent</span>
+                <h3>AI Data Analytics Agent for automated insight generation</h3>
+                <p>
+                  Initiated and developed a Copilot data analytics agent to analyse large-scale data, generate executive summaries,
+                  and produce narrative analysis for decision-making.
+                  <br><br>
+                  Developed an AI Data Specialist to automate Excel documents processing, 
+                  extract and transform data, apply rule-based mapping, and perform classification with historical case retrieval, 
+                  improving data processing efficiency and accuracy.
+                </p>
+              </div>
+              <div class="project-result">Impact: break down data silos, faster analytics and reporting across teams</div>
+            </article>
+
+            <article class="project-card">
+              <div>
+                <span class="tag">Data Engineering</span>
+                <h3>Incremental ETL pipelines on Microsoft Fabric Lakehouse and Warehouse</h3>
+                <p>
+                  Re-architected full-refresh dataflows into incremental pipelines
+                  using SQL, Python, PySpark, notebooks, stored procedures, and Fabric
+                  data pipelines aligned with Medallion principles.
+                </p>
+              </div>
+              <div class="project-result">Outcome: around 50% reduction in processing time</div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="experience">
+        <div class="shell">
+          <div class="section-head">
+            <h2>Experience and background</h2>
+            <p>
+              My path spans data science, analytics consulting, and solution architecture.
+            </p>
+          </div>
+
+          <div class="experience-grid">
+            <div class="roles">
+              <article class="role-card">
+                <div class="role-meta">
+                  <span>2023 - Present</span>
+                  <span>Manchester, UK</span>
+                </div>
+                <h3>Senior Data Analyst</h3>
+                <p>
+                  Data science, AI agents, Power BI, Automation, ETL pipelines, Data Governance, and 
+                  Business Reporting Transformation for business-critical delivery; Railway, Programme Performance, Infrastructure, Asset Management.
+                </p>
+              </article>
+              <article class="role-card">
+                <div class="role-meta">
+                  <span>2022 - 2023</span>
+                  <span>Manchester, UK</span>
+                </div>
+                <h3>Associate Solutions Architect</h3>
+                <p>
+                  Data Governance, IAM, Azure AD Access Design, Solution Architecture,
+                  Technical Documentation, cross-team delivery support; Connected and Electric Vehicle Big Data.
+                </p>
+              </article>
+              <article class="role-card">
+                <div class="role-meta">
+                  <span>2020 - 2022</span>
+                  <span>Illinois, United States</span>
+                </div>
+                <h3>Data Scientist</h3>
+                <p>
+                  Machine learning, vehicle crash risk prediction, statistical analysis,
+                  automated data pipelines, data visualisation, AWS; Transportation Safety.
+                </p>
+              </article>
+            </div>
+
+            <aside class="education-card">
+              <p class="eyebrow">Education / Certifications / Skills </p>
+              <h3 class="subsection-title">Education</h3>
+              <div class="education-list">
+                <div class="education-item">
+                  <strong>Master of Computer Science</strong>
+                  <span>
+                    <li>Courses include: Statistical machine learning, data visualisation, data mining, large-scale data processing, software project management.</li>
+                  </span>
+                </div>
+                <div class="education-item">
+                  <strong>Master of Science in Civil Engineering</strong>
+                  <span>
+                    <li>Thesis: A Machine Learning Model for Vehicle Crash Type Prediction</li>
+                    <li>Awarded the 1st Prize in the Student Data Challenge on Urban Travel Time, Speed and Reliability at Transportation Research Board 99th Annual Meeting.</li>
+                    <li>Presented at the 68th Illinois Traffic Engineering and Safety Conference.</li>
+                    <li>Graduate Teaching Assistant (Full Tuition Waiver + Stipend) 
+                      - Developed Python and HTML scripts to automise assessment marking.
+                      - Held office hours to help students with questions regarding lectures and Python/R programming.</li>
+                  </span>
+                </div>
+                <div class="education-item">
+                  <strong>Bachelor of Engineering in Civil Engineering</strong>
+                  <span>
+                    <li>
+                      Honors Program in Science & Engineering, Chu Kochen Honors College
+                    </li>
+                  </span>
+                </div>
+              </div>
+              <h3 class="subsection-title">Certification</h3>
+              <div class="certification-list" aria-label="Certifications">
+                <span class="certification-item">PMP</span>
+                <span class="certification-item">Microsoft Certified: Azure AI Engineer Associate</span>
+                <span class="certification-item">Microsoft Certified: Azure Solutions Architect Expert</span>
+                <span class="certification-item">Microsoft Certified: Azure Administrator Associate</span>
+                <span class="certification-item">Microsoft Certified: Azure Data Engineer Associate</span>
+                <span class="certification-item">Microsoft Certified: Power BI Data Analyst Associate</span>
+                <span class="certification-item">Microsoft Certified: Power Platform Fundamentals</span>
+                <span class="certification-item">Microsoft Certified: Azure AI Fundamentals</span>
+                <span class="certification-item">AWS Certified Cloud Practitioner</span>
+                <span class="certification-item">Data Build Tool (DBT) Fundamentals</span>
+              </div>
+              <h3 class="subsection-title">Skills</h3>
+              <div class="skills" aria-label="Skill tags">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>PySpark</span>
+                <span>Power BI</span>
+                <span>Microsoft Fabric</span>
+                <span>AWS</span>
+                <span>Azure</span>
+                <span>Airflow</span>
+                <span>Terraform</span>
+                <span>Data Governance</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="shell contact-panel">
+          <div>
+            <h2>Let us build better data and AI systems.</h2>
+            <p>
+              I am interested in data science, analytics engineering, AI Agent,
+              automation, and data transformation opportunities where technical work
+              connects directly to business outcomes.
+            </p>
+          </div>
+          <div class="contact-links" aria-label="Contact links">
+            <a href="mailto:xlnczju@outlook.com">Email</a>
+            <a href="https://www.linkedin.com/in/xiyue-li-pmp-4ab339189/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <span>© 2026 Xiyue Li</span>
+        <span>Data Science & Analytics · AI Strategy · Organization Transformation · Leadership </span>
+      </div>
+    </footer>
+  </body>
+</html>
