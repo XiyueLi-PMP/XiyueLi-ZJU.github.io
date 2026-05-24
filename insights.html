@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>insights | Your Name</title>
+    <style>
+      body {
+        margin: 0;
+        background: #fbfbf8;
+        color: #141414;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        line-height: 1.7;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .shell {
+        width: min(1040px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 56px 0 80px;
+      }
+
+      .back {
+        color: #214f45;
+        font-weight: 800;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 34px 0 16px;
+        font-size: clamp(42px, 6vw, 72px);
+        line-height: 1;
+      }
+
+      .intro {
+        max-width: 720px;
+        color: #5f625f;
+        font-size: 19px;
+      }
+
+      .insight-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 40px;
+      }
+
+      .insight-card {
+        min-height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid #dde2dc;
+        border-radius: 8px;
+        background: #ffffff;
+        padding: 24px;
+      }
+
+      .insight-card:hover {
+        border-color: #214f45;
+      }
+
+      .insight-tag {
+        color: #bd5d43;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .insight-card h2 {
+        margin: 22px 0 10px;
+        font-size: 24px;
+        line-height: 1.15;
+      }
+
+      .insight-card p {
+        color: #5f625f;
+      }
+
+      .read-more {
+        color: #214f45;
+        font-weight: 800;
+      }
+
+      @media (max-width: 860px) {
+        .insight-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="shell">
+      <a class="back" href="index.html">Back to homepage</a>
+
+      <h1>Insights on data, AI, and leadership.</h1>
+      <p class="intro">
+        Stories and observations from my experience in data and AI solutions. 
+      </p>
+
+      <section class="insight-grid">
+
+        <a class="insight-card" href="insights/customer-journey-data-flow.html">
+          <div>
+            <span class="insight-tag">Data Flow & Customer Experience</span>
+            <h2>Customer trust is shaped by how smoothly data moves</h2>
+            <p>
+              A complex customer journey made me reflect on how data silos across teams
+              can fragment service continuity, create uncertainty, and weaken trust when
+              information does not flow seamlessly across an organisation.
+            </p>
+          </div>
+          <span class="read-more">Read insight</span>
+        </a>
+
+      </section>
+    </main>
+  </body>
+</html>
