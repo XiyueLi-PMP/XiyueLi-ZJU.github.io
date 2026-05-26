@@ -90,6 +90,41 @@
           grid-template-columns: 1fr;
         }
       }
+
+      .topic-section {
+        margin: 48px 0;
+      }
+
+      .topic-header {
+        margin-bottom: 20px;
+      }
+
+      .topic-label {
+        display: inline-block;
+        margin-bottom: 8px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #5b6b7a;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      .topic-header h2 {
+        margin: 0 0 8px;
+        font-size: 1.6rem;
+      }
+
+      .topic-header p {
+        max-width: 720px;
+        margin: 0;
+        color: #5f6b76;
+        line-height: 1.6;
+      }
+
+      .topic-articles {
+        display: grid;
+        gap: 16px;
+      }
     </style>
   </head>
 
@@ -102,42 +137,51 @@
         Stories and observations from my experience in data and AI solutions. 
       </p>
 
-      <section class="insight-grid">
+      <section class="topic-section">
+        <div class="topic-header">
+          <span class="topic-label">Topic</span>
+          <h2>Data Strategy in the AI Era</h2>
+          <p>
+            This article series explores how enterprise data strategy needs to evolve in the AI era.
+          </p>
+        </div>
 
-        <a class="insight-card" href="insights/customer-journey-data-flow.html">
-          <div>
-            <span class="insight-tag">Data Flow & Customer Experience</span>
-            <h2>Customer trust is shaped by how smoothly data moves</h2>
-            <p>
-              A complex customer journey made me reflect on how data silos across teams
-              can fragment service continuity, create uncertainty, and weaken trust when
-              information does not flow seamlessly across an organisation.
-            </p>
-          </div>
-          <span class="read-more">Read insight</span>
-          <div class="timestamp">
-            Created on May 23, 2026
-          </div>
-        </a>
+        <div class="topic-articles">
+          <a class="insight-card" href="insights/customer-journey-data-flow.html">
+            <div>
+              <span class="insight-tag">Data Flow & Customer Experience</span>
+              <h3>Customer trust is shaped by how smoothly data moves</h3>
+              <p>
+                A complex customer journey made me reflect on how data silos across teams
+                can fragment service continuity, create uncertainty, and weaken trust when
+                information does not flow seamlessly across an organisation.
+              </p>
+            </div>
+            <span class="read-more">Read insight</span>
+            <div class="timestamp">
+              Created on May 23, 2026
+            </div>
+          </a>
 
-        <a class="insight-card" href="insights/data-Silos-the-bottleneck-behind-enterprise AI.html">
-          <div>
-            <span class="insight-tag">AI & Organizational Data Strategy</span>
-            <h2>Data Silos: The Bottleneck Behind Enterprise AI</h2>
-            <p>
-              Going through a complex customer journey as a customer recently made me reflect more deeply on 
-              the importance of seamless information flow in the AI era. 
-              Ultimately, the value of AI depends not only on analytical capability, 
-              but also on how effectively data and information flow across teams, systems, and decision-making processes.
-            </p>
-          </div>
-          <span class="read-more">Read insight</span>
-          <div class="timestamp">
-            Created on May 25, 2026
-          </div>
-        </a>
-
-      </section>
+          <a class="insight-card" href="insights/data-silos-the-bottleneck-behind-enterprise AI.html">
+            <div>
+              <span class="insight-tag">AI & Organizational Data Strategy</span>
+              <h3>Data Silos: The Bottleneck Behind Enterprise AI</h3>
+              <p>
+                Going through a complex customer journey as a customer recently made me reflect
+                more deeply on the importance of seamless information flow in the AI era.
+                Ultimately, the value of AI depends not only on analytical capability,
+                but also on how effectively data and information flow across teams, systems,
+                and decision-making processes.
+              </p>
+            </div>
+            <span class="read-more">Read insight</span>
+            <div class="timestamp">
+              Created on May 25, 2026
+            </div>
+          </a>
+  </div>
+</section>
     </main>
   </body>
 </html>
